@@ -11,7 +11,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            //added uiimagePickerControllerDelegate to VC
+        //added uiimagePickerControllerDelegate to VC
+        //edit 1
     }
 
 
