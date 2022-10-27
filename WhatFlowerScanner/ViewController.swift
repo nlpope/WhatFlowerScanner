@@ -7,12 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //added uiimagePickerControllerDelegate to VC
-        //edit 1
+        
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = false
     }
 
 
