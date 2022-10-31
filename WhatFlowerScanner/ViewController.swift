@@ -7,8 +7,11 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -20,7 +23,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        <#code#>
+        if let userPickedImage = info[.originalImage] as? UIImage {
+            imageView.image = userPickedImage
+            
+            guard let ciimage = CIImage(image: userPickedImage) else {
+                fatalError("Could not convert UIImage into CIImage")
+            }
+            // detect(image: ciimage)
+        }
     }
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
