@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -32,6 +32,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // detect(image: ciimage)
         }
     }
+    
+//    func detect(image: CIImage) {
+//        //(CoreImageImage) THIS FUNC PROCESSES THE IMAGE USING CORE IMAGE FILTERS
+//        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+//            fatalError("Loading CoreML Model Failed.")
+//        }
+//
+//        let request = VNCoreMLRequest(model: model) {
+//
+//        }
+//    }
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)

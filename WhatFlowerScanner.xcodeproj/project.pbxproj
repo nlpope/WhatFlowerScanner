@@ -13,6 +13,7 @@
 		40137860290AAA64007CEC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4013785E290AAA64007CEC04 /* Main.storyboard */; };
 		40137862290AAA67007CEC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40137861290AAA67007CEC04 /* Assets.xcassets */; };
 		40137865290AAA67007CEC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40137863290AAA67007CEC04 /* LaunchScreen.storyboard */; };
+		4013786D29113BC5007CEC04 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		40137861290AAA67007CEC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40137864290AAA67007CEC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40137866290AAA67007CEC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4013785E290AAA64007CEC04 /* Main.storyboard */,
 				40137861290AAA67007CEC04 /* Assets.xcassets */,
 				40137863290AAA67007CEC04 /* LaunchScreen.storyboard */,
+				4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */,
 				40137866290AAA67007CEC04 /* Info.plist */,
 			);
 			path = WhatFlowerScanner;
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4013785D290AAA64007CEC04 /* ViewController.swift in Sources */,
+				4013786D29113BC5007CEC04 /* Inceptionv3.mlmodel in Sources */,
 				40137859290AAA64007CEC04 /* AppDelegate.swift in Sources */,
 				4013785B290AAA64007CEC04 /* SceneDelegate.swift in Sources */,
 			);
