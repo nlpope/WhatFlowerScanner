@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //camera and capture works wout this func. just converting to UIImage for detction use later
+    //also the dismissal logic (after pressing "use photo") won't work wout this func
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let userPickedImage = info[UIImagePickerController.InfoKey.originalImage]
         
