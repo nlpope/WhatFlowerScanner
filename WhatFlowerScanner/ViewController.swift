@@ -29,13 +29,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        let userPickedImage = info[UIImagePickerController.InfoKey.editedImage]
-        
-        imageView.image = userPickedImage as? UIImage
+        if let userPickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            guard let ciImage = CIImage(image: userPickedImage) else {
+                fatalError("Could not convert image to CIImage")
+            }
+            
+            imageView.image = userPickedImage
+            
+            detect(flowerImage: ciImage)
+
+        }
         
         imagePicker.dismiss(animated: true)
 
-
+    }
+    
+    // CIImage = A representation of an image to be processed or produced by Core Image filters.
+    
+    func detect(flowerImage: CIImage) {
+        
     }
     
 
