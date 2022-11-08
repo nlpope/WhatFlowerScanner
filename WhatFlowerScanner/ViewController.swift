@@ -45,11 +45,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // CIImage = A representation of an image to be processed by Core Image filters.
-    
     func detect(flowerImage: CIImage) {
-        
-        //more research required for VNCoreMLModel and all related items
-        
+       //VNCoreMLModel = container for our MLModel: inceptionV3
+        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+            fatalError("Loading CoreML Model failed")
+        }
+            
     }
     
 
@@ -64,7 +65,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 
 
-
+/**
+ Notes:
+ The detect func is so we can use inceptionV3 model to ID the flowers
+ */
 
 /**UNUSED/VALUEABLE CODE**/
 
