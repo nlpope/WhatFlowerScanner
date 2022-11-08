@@ -48,7 +48,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func detect(flowerImage: CIImage) {
         
-        
+        //more research required for VNCoreMLModel and all related items
         
     }
     
