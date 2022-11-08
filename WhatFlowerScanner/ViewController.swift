@@ -44,9 +44,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
-    // CIImage = A representation of an image to be processed or produced by Core Image filters.
+    // CIImage = A representation of an image to be processed by Core Image filters.
     
     func detect(flowerImage: CIImage) {
+        
+        
         
     }
     
