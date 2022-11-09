@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if let userPickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             guard let ciImage = CIImage(image: userPickedImage) else {
-                fatalError("Could not convert image to CIImage")
+                fatalError("Could not convert UIImage to CIImage")
             }
             
             imageView.image = userPickedImage
@@ -50,6 +50,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("Loading CoreML Model failed")
         }
+        
+        //reviewing completion handlers before continuing
+        let request = VNCoreMLRequest(model: <#T##VNCoreMLModel#>)
             
     }
     
