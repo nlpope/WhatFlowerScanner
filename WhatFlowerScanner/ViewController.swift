@@ -52,7 +52,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         //reviewing completion handlers before continuing
-        let request = VNCoreMLRequest(model: <#T##VNCoreMLModel#>)
+        let request = VNCoreMLRequest(model: model) { request, error in
+            //process result of request once completed
+            guard let results = request.results as? [VNClassificationObservation] else {
+                fatalError("Failed to load results from request")
+            }
+        }
             
     }
     
