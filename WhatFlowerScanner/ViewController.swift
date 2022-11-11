@@ -57,6 +57,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Failed to load results from request")
             }
+            
+            print(results)
         }
             
     }
