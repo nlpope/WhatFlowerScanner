@@ -46,24 +46,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // CIImage = A representation of an image to be processed by Core Image filters.
     func detect(flowerImage: CIImage) {
-       //VNCoreMLModel = container for our MLModel: inceptionV3
+       //THE MODEL: VNCoreMLModel = container for our MLModel: inceptionV3
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("Loading CoreML Model failed")
         }
         
-        //reviewing completion handlers before continuing
+        //THE ARRAY = RESULTS
         let request = VNCoreMLRequest(model: model) { request, error in
             //process result of request once completed
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Failed to load results from request")
             }
+            //so we have the array, but still no ref to image to classify
             
             print(results)
         }
             
+        //create a handler that specifies the image we want to classify
+        //THE IMAGE ANALYZER
+        let handler = VNImageRequestHandler(ciImage: flowerImage)
+        
+        //begin executing the request
+        do {
+            try? handler.perform([request])
+        }
+        catch {
+            print(error)
+        }
     }
     
-
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
