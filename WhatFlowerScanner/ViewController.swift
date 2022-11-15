@@ -95,6 +95,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 /**
  Notes:
  The detect func is so we can use inceptionV3 model to ID the flowers
+ 
+ Having trouble with 'pod init' in terminal - inv why
+ 
+ Good news is I installed command line tools package to init the pods / podfiles in the first place
  */
 
 /**UNUSED/VALUEABLE CODE**/
