@@ -30,13 +30,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let userPickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            guard let ciImage = CIImage(image: userPickedImage) else {
+            guard let convertedCIIMAGE = CIImage(image: userPickedImage) else {
                 fatalError("Could not convert UIImage to CIImage")
             }
             
             imageView.image = userPickedImage
             
-            detect(flowerImage: ciImage)
+            detect(flowerImage: convertedCIIMAGE)
 
         }
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //so we have the array, but still no ref to image to classify
             
             if let firstResult = results.first {
-                self.navigationItem.title = firstResult.identifier
+                self.navigationItem.title = firstResult.identifier.capitalized
             } else {
                 print("no results were loaded")
             }
