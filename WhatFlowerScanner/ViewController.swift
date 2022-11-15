@@ -59,8 +59,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             //so we have the array, but still no ref to image to classify
             
-            print(results)
+            if let firstResult = results.first {
+                self.navigationItem.title = firstResult.identifier
+            } else {
+                print("no results were loaded")
+            }
         }
+        
+        
             
         //create a handler that specifies the image we want to classify
         //THE IMAGE ANALYZER
@@ -110,3 +116,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //
 //        }
 //    }
+
+
+//if let firstResult = results.first {
+//    if firstResult.identifier.contains("hotdog") {
+//        self.navigationItem.title = "Hotdog!"
+//    } else {
+//        self.navigationItem.title = "Not Hotdog!"
+//    }
+//} else {
+//    print("no results were loaded")
+//}
