@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		40137862290AAA67007CEC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40137861290AAA67007CEC04 /* Assets.xcassets */; };
 		40137865290AAA67007CEC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40137863290AAA67007CEC04 /* LaunchScreen.storyboard */; };
 		4013786D29113BC5007CEC04 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */; };
+		8D67922701130A313D4195AB /* Pods_WhatFlowerScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721AD4BA23F28C77EFD7F05B /* Pods_WhatFlowerScanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		40137864290AAA67007CEC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40137866290AAA67007CEC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		721AD4BA23F28C77EFD7F05B /* Pods_WhatFlowerScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatFlowerScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C1BC4EBAB6ACB39DE20E1E /* Pods-WhatFlowerScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerScanner.release.xcconfig"; path = "Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner.release.xcconfig"; sourceTree = "<group>"; };
+		C4D6E8CB5F80C789BF00A075 /* Pods-WhatFlowerScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerScanner.debug.xcconfig"; path = "Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D67922701130A313D4195AB /* Pods_WhatFlowerScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				40137857290AAA64007CEC04 /* WhatFlowerScanner */,
 				40137856290AAA64007CEC04 /* Products */,
+				BDBED7B80575063D807699A2 /* Pods */,
+				D54F698C18919DFC65D4639B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = WhatFlowerScanner;
 			sourceTree = "<group>";
 		};
+		BDBED7B80575063D807699A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4D6E8CB5F80C789BF00A075 /* Pods-WhatFlowerScanner.debug.xcconfig */,
+				96C1BC4EBAB6ACB39DE20E1E /* Pods-WhatFlowerScanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D54F698C18919DFC65D4639B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				721AD4BA23F28C77EFD7F05B /* Pods_WhatFlowerScanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40137869290AAA67007CEC04 /* Build configuration list for PBXNativeTarget "WhatFlowerScanner" */;
 			buildPhases = (
+				2B86AAE2275B15E04CCCB726 /* [CP] Check Pods Manifest.lock */,
 				40137851290AAA64007CEC04 /* Sources */,
 				40137852290AAA64007CEC04 /* Frameworks */,
 				40137853290AAA64007CEC04 /* Resources */,
+				B08399A569190D2EB9D6D407 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,7 +133,7 @@
 				};
 			};
 			buildConfigurationList = 40137850290AAA64007CEC04 /* Build configuration list for PBXProject "WhatFlowerScanner" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B86AAE2275B15E04CCCB726 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatFlowerScanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B08399A569190D2EB9D6D407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40137851290AAA64007CEC04 /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		4013786A290AAA67007CEC04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4D6E8CB5F80C789BF00A075 /* Pods-WhatFlowerScanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		4013786B290AAA67007CEC04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C1BC4EBAB6ACB39DE20E1E /* Pods-WhatFlowerScanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
