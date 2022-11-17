@@ -8,6 +8,8 @@
 import UIKit
 import Vision
 import CoreML
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
