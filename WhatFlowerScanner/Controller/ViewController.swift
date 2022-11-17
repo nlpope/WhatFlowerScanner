@@ -96,11 +96,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 /**
  Notes:
- The detect func is so we can use inceptionV3 model to ID the flowers
- 
- Having trouble with 'pod init' in terminal - inv why ->  (pod files challenge)
- 
- Good news is I installed command line tools package to init the pods / podfiles in the first place
+ Goal: Get a hold of and display the "extract" prop in the resulting app image display text 
+ ->format an http request usihg alamofire passing it parameters and the url and print entire json into debug area
  */
 
 /**UNUSED/VALUEABLE CODE**/

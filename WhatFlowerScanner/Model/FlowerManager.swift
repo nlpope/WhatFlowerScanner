@@ -7,6 +7,10 @@
 
 import Foundation
 
-let wikiURL = "https://en.wikipedia.org/w/api.php?"
+let wikiURL: String! = "https://en.wikipedia.org/w/api.php?"
 
-//test
+//pageID = result["query"]["pageids"][0] = 1276123  (contains extract so now we can use it in...)
+
+//result["query"]["pages"][pageID]["title"]
+//result["query"]["pages"][pageID]["extract"]
+
