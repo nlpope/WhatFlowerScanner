@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var imageView: UIImageView!
     
+    let wikiURL = "https://en.wikipedia.org/w/api.php"
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -83,6 +84,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    lazy var sampleRequest = URLRequest(url: URL(string: wikiURL)!)
+    
+//    func requestInfo(flowerName: String) {
+//
+//    }
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
