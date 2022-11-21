@@ -7,7 +7,17 @@
 
 import Foundation
 
-let wikiURL: String! = "https://en.wikipedia.org/w/api.php?"
+struct FlowerManager {
+    let wikiURL: String! = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&indexpageids"
+    
+    func fetchFlower(flowerName: String) {
+        let urlString = "\(wikiURL)&titles=\(flowerName)"
+    }
+}
+
+
+
+
 
 //pageID = result["query"]["pageids"][0] = 1276123  (contains extract so now we can use it in...)
 
