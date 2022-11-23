@@ -66,18 +66,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
         
-        
-            
+        //i dont get this part
         let handler = VNImageRequestHandler(ciImage: flowerImage)
         
         do {
-            try? handler.perform([request])
+            try handler.perform([request])
         }
         catch {
             print(error)
         }
     }
+    
+    func requestInfo(flowerName: String) {
         
+        let parameters : [String:String] = [
+            "format" : "json",
+            "action" : "query",
+            "prop" : "extracts",
+            "exintro" : "",
+            "explaintext" : "",
+            "titles" : flowerName,
+            "indexpageids" : "",
+            "redirects" : "1",
+        ]
+        
+        AF.request(flowerManager.wikiURL, method: .get, parameters: parameters)
+    }
 
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
