@@ -14,8 +14,6 @@
 		40137862290AAA67007CEC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40137861290AAA67007CEC04 /* Assets.xcassets */; };
 		40137865290AAA67007CEC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40137863290AAA67007CEC04 /* LaunchScreen.storyboard */; };
 		4013786D29113BC5007CEC04 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */; };
-		40137874292665DD007CEC04 /* FlowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40137873292665DD007CEC04 /* FlowerModel.swift */; };
-		4013787629266657007CEC04 /* FlowerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013787529266657007CEC04 /* FlowerManager.swift */; };
 		8D67922701130A313D4195AB /* Pods_WhatFlowerScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721AD4BA23F28C77EFD7F05B /* Pods_WhatFlowerScanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +27,6 @@
 		40137864290AAA67007CEC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40137866290AAA67007CEC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4013786C29113BC5007CEC04 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
-		40137873292665DD007CEC04 /* FlowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerModel.swift; sourceTree = "<group>"; };
-		4013787529266657007CEC04 /* FlowerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerManager.swift; sourceTree = "<group>"; };
 		721AD4BA23F28C77EFD7F05B /* Pods_WhatFlowerScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatFlowerScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C1BC4EBAB6ACB39DE20E1E /* Pods-WhatFlowerScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerScanner.release.xcconfig"; path = "Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner.release.xcconfig"; sourceTree = "<group>"; };
 		C4D6E8CB5F80C789BF00A075 /* Pods-WhatFlowerScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerScanner.debug.xcconfig"; path = "Target Support Files/Pods-WhatFlowerScanner/Pods-WhatFlowerScanner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,8 +81,6 @@
 		4013786E292660E0007CEC04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40137873292665DD007CEC04 /* FlowerModel.swift */,
-				4013787529266657007CEC04 /* FlowerManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,8 +237,6 @@
 				4013786D29113BC5007CEC04 /* Inceptionv3.mlmodel in Sources */,
 				40137859290AAA64007CEC04 /* AppDelegate.swift in Sources */,
 				4013785B290AAA64007CEC04 /* SceneDelegate.swift in Sources */,
-				4013787629266657007CEC04 /* FlowerManager.swift in Sources */,
-				40137874292665DD007CEC04 /* FlowerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

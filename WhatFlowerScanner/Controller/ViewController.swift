@@ -16,8 +16,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
-    var flowerManager = FlowerManager()
+    let wikiURL: String! = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&indexpageids"
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,7 +91,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             "redirects" : "1",
         ]
         
-        AF.request(flowerManager.wikiURL, method: .get, parameters: parameters)
+        //MAY NEED TO SCALE BACK ALAMOFIRE VERSION TO 4.4 (SEE FREEMIND AND UDEMY MODULE NOTES)
+        
+        AF.request(wikiURL, method: .get, parameters: parameters).responseJSON
+        { response in
+            if response.result {
+                print("Got the wikipedia info.")
+                print(response)
+            }
+        }
     }
 
 
