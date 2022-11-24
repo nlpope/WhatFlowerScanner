@@ -56,15 +56,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         let request = VNCoreMLRequest(model: model) { request, error in
-            guard let results = request.results as? [VNClassificationObservation] else {
-                fatalError("Failed to load results from request")
+            guard let classification = request.results?.first as? VNClassificationObservation else {
+                fatalError("Could not classify image.")
             }
             
-            if let firstResult = results.first {
-                self.navigationItem.title = firstResult.identifier.capitalized
-            } else {
-                print("no results were loaded")
-            }
+            self.navigationItem.title = classification.identifier.capitalized
+            self.requestInfo(flowerName: classification.identifier)
+            
         }
         
         //i dont get this part
@@ -96,9 +94,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         AF.request(wikiURL, method: .get, parameters: parameters).responseJSON
         { response in
-            if response.error == nil {
+            if response.error != nil {
                 print("Got the wikipedia info.")
                 print(response)
+            } else {
+                print(response.error!)
             }
         }
     }
