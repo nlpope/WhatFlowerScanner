@@ -98,7 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print("Got the wikipedia info.")
                 print(response)
             } else {
-                print(response.error!)
+                fatalError("There was an error in AlamoFire's response: \(String(describing: response.error))")
             }
         }
     }
