@@ -90,11 +90,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         ]
         
         //MAY NEED TO SCALE BACK ALAMOFIRE VERSION TO 4.4 (SEE FREEMIND AND UDEMY MODULE NOTES)
-        //SCRATCH THAT, "R&D LABS W ROHANT" (FREEMIND>ALAMOFIRE) TESTED FOR ERROR INSTEAD
+        //SCRATCH THAT, "R&D LABS W ROHANT" (FREEMIND>ALAMOFIRE) TESTED FOR ERROR INSTEAD.
         
         AF.request(wikiURL, method: .get, parameters: parameters).responseJSON
         { response in
-            if response.error != nil {
+            if response.error == nil {
                 print("Got the wikipedia info.")
                 print(response)
             } else {
